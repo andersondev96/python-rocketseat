@@ -13,3 +13,10 @@ Por fim, é somado esses 3 valores e entregando o resultado.
 - Por fim, é retirado o *desvio padrão* desses resultados e retornado o inverso desse valor (1/result)
 
 Dica: Utilize a lib *Numpy* para calcular o *desvio padrão*
+
+## Calculadora 3
+- N números são colocados como entrada
+- Caso a variância de todos esses números for menor que a multiplicação deles, é apresentado uma informação de sucesso ao usuário.
+- Caso contrário, é apresentado uma informação de falha.
+
+Obs: Para o cálculo da variância, utilize o método "var" da lib numpy
