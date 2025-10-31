@@ -2,7 +2,7 @@
 
 from abc import ABC, abstractmethod
 
-class Document(ABC):
+class Document(ABC): # generic
 
   @abstractmethod
   def load(self): pass
@@ -16,17 +16,23 @@ class Document(ABC):
   @abstractmethod
   def calculate(self): pass
 
-class PDF(Document):
-  def load(self):
-    print('load in pdf')
+class DocumentPDF(ABC): # ISP
+  @abstractmethod
+  def load(self): pass
 
-  def view(self):
-    print('view informations')
+  @abstractmethod
+  def view(self): pass
 
-  def calculate(self):
-    print('No use')
+class DocumentTXT(ABC): # ISP
+  @abstractmethod
+  def load(self): pass
 
-  def format(self):
-    print('No use')
+  @abstractmethod
+  def format(self): pass
 
-document1 = PDF()
+class DocumentExcel(ABC): # ISP
+  @abstractmethod
+  def load(self): pass
+
+  @abstractmethod
+  def calculate(self): pass
